@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>flex</title>
+
+    <style>
+      .container{
+                background-color: powderblue;
+                
+                display: flex;
+                
+                /* 컨테이너 크기를 줄이면 item 크기도
+                자동으로 줄어든다. 이유는 주축에
+                한번에 보여주기 위해서이다. */
+
+                /* flex-wrap: nowrap; */
+
+                /* item 크기를 동일하게 맞추기 위해서
+                다음 라인으로 넘어간다 */
+                /* flex-wrap: wrap; */
+
+                flex-wrap: wrap-reverse;
+        }
+      .item{
+        background-color: tomato;
+        color:white;
+        border:1px solid white;
+        width: 300px;
+      }
+    </style>
+    
+
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+
+
+
+
+</html>

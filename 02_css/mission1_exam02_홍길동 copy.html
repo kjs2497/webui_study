@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS_Workshop_02</title>
+
+    <style>
+        h1{
+            text-align: center;
+        }
+        
+        select, #check, #address{
+            background-color: black;
+            color: white;
+        }
+      
+
+    </style>
+
+
+</head>
+<body>
+  <h1>회원가입</h1>
+   <hr>
+   <div>
+    <br>아이디 <input type="text"> <input type="button" id="check" value="중복확인">
+    <br>비밀번호 <input type="text">
+    <br>비밀번호확인 <input type="text">
+    <br>이름 <input type="text">
+    <br>주소 <input type="text"> <input type="button" id="address" value="우편번호검색"> <br>
+            <input type="text"><br>
+             <input type="text">
+    <br>전화번호 <select id="phone" name="phone">
+        <option value="010">010</option>
+        <option value="011">011</option>
+        <option value="053">053</option>
+        <option value="054">054</option>
+    </select> 
+        <input type="text"> 
+        <input type="text"> 
+    <br> 이메일 <input type="text"> @ <input type="text"> 
+        <select id="email" name="email">
+        <option value="이메일선택">이메일선택</option>
+        <option value="gamil">gmail.com</option>
+        <option value="naver">naver.com</option>
+        <option value="daum">daum.net</option>
+    </select>
+    </div>
+    <hr>
+    <input type="submit" value="회원가입">
+    <input type="submit" value="지우기">
+</body>
+</html>
