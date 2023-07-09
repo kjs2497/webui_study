@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mission3</title>
+</head>
+<body>
+    <h1>Payment Form</h1>
+    <hr>
+    Required fields are followed by * <br>
+    <h2>Contact Information</h2>
+
+    <form action="target.html">
+        Name: * <input type="text" name="name" placeholder="smith"> <br> <br>
+        <fieldset>
+            <legend>Gender *</legend> 
+            Male <input type="radio" name="gender" value="Male"> 
+            FeMale <input type="radio" name="gender" value="FeMale"> 
+            Other <input type="radio" name="gender" value="Other">
+        </fieldset> <br>
+
+        
+
+        Address: <br>
+        <textarea name="Address" id="Address" cols="70" rows="5" placeholder="Enter the address"></textarea> <br><br>
+        Email: * <input type="email" name="Email" placeholder="smith@gmail.com"> <br> <br>
+        Pincode: * <input type="text" name="Pincode" placeholder="123456"> <br>
+        <hr>
+        <h2>Payment Information</h2>
+
+        Card Type: * <select id="Card" name="Card">
+            <option value="--Select a Card Type--">--Select a Card Type--</option>
+            <option value="Rupay">Rupay</option>
+            <option value="Mastercard">Mastercard</option>
+            <option value="Visa">Visa</option>
+        </select> <br><br>
+        Card number: * <input type="text" name="card number" placeholder="1111-2222-3333-4444"><br><br>
+        Expiration Date: * <input type="date"><br><br>
+        CVV : * <input type="text" name="m_CVV"> <br><br>
+
+
+        <input type="submit" value="Pay Now">
+    </form>
+
+    
+</body>
+</html>
