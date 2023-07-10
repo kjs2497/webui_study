@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>2023. 7. 10. 실습 중</title>
+
+    <script>
+
+        function li_print(){
+            var li_arr = document.querySelectorAll("li");
+            console.log(li_arr);
+            for(var li of li_arr){
+                console.log(li.innerText);
+            }
+        }
+
+
+    </script>
+
+</head>
+<body>
+    <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+    </ul>
+    <button onclick="li_print()">값출력</button>
+</body>
+</html>

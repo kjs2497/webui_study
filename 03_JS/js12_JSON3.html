@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>2023. 7. 10. 실습 중</title>
+
+    <script>
+
+        // 사용자 정의 객체 : JSON
+        // 단축 표현식
+
+        var username = "홍길동";
+
+        const person = {
+            username, //username: username : 키와 밸류가 동일할 경우 한번만 쓸 수 있음
+            age: 20,
+
+            getusername(){return this.username;}, 
+            getage(){return this.age;},
+
+            setusername(name){this.username=name},
+            setage(a){this.age = a;}
+            // :function을 생략할 수 있다.
+        };
+        
+        // 2. person객체의 속성 (property) 사용
+        console.log(person.username, person.age);
+        person.setusername("이순신");
+        person.setage(44);
+        console.log(person.getusername(), person.getage());
+
+
+
+    </script>
+
+</head>
+<body>
+   
+
+</body>
+</html>
