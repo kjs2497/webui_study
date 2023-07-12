@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- CDN 방식 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script>
+ 
+        // DOM Tree가 모두 완료된 후 호출
+        /*
+            $(선택자).each(function(idx, obj){});
+        */
+
+        $(document).ready(function(){
+          
+          // button 이벤트 처리
+          $("#ok").on("click mouseover",function(){ // 버튼은 click 이벤트
+            console.log("OK");
+            console.log(this); // JS 객체
+            console.log($(this)); // JQuery 객체
+            console.log($(this).text()); // JQuery 객체
+            
+            console.log(event); // Event 객체
+            console.log(event.target); // Event 객체를 이용해서 이벤트 소스객체 참조 가능
+          });
+
+
+          //text 이벤트 처리
+          $("#txtInput").on("keyup",function(){ // 타이핑하고 키보드를 뗄때 keyup 이벤트 사용
+            // 사용자 입력 값을 가져올 때는 val을 사용 !!!!!!
+            console.log($(this).val()); 
+          });
+
+          //select 이벤트 처리
+          $("select").on("change",function(){  // 값이 변경 되므로 change 이벤트 사용
+            console.log($(this).val());
+            console.log($(":selected").text()); // :selected는 value 값을 가져오고 text는 태그 안의 값을 가져옴
+          });
+
+          //submit 이벤트 (무조건 넘어가는 것을 방지하기)
+          $("form").on("submit",function(){
+            // 아이디는 필수 항목
+            var id = $("#userid").val();
+            if(id.length==0){
+              event.preventDefault();
+              alert("아이디를 입력하시오");
+              $("#userid").focus();
+            }
+          });
+
+          
+
+
+
+
+        });
+
+    </script>
+
+
+</head>
+<body>
+  <button id="ok">OK</button><br>
+
+
+  text:<input type="text" id="txtInput" /> <br>
+  <button id="hover">hover</button><br>
+  <form action="http://www.google.com">
+  아이디<input type="text" name="userid" id="userid"><br>
+  비밀번호<input type="text" name="passwd"><br>
+  <select name="fruit">
+   <option value="사과">사과</option>
+   <option value="바나나">바나나</option>
+   <option value="수박">수박</option>
+  </select><br>
+   사과<input type="checkbox" name="checkbox" id="checkbox" checked>
+  <input type="submit" value="전송">
+  </form>
+  
+
+
+</body>
+</html>
